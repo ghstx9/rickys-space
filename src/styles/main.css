@@ -13,6 +13,20 @@ body {
   overflow-x: hidden;
 }
 
+.dm-sans-notavers {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.libre-franklin-yesavers {
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -101,6 +115,7 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 .project-item {
@@ -138,6 +153,7 @@ body {
 /* Description */
 .description {
   margin-bottom: 60px;
+  font-family: "DM Sans", sans-serif; 
 }
 
 .description p {
@@ -154,6 +170,7 @@ body {
 .cta p {
   font-size: 18px;
   color: #cccccc;
+  font-family: "DM Sans", sans-serif;
 }
 
 /* Links */
@@ -200,7 +217,7 @@ body {
   .desktop-break {
     display: none;
   }
-  
+
   .nav {
     flex-direction: column;
     gap: 20px;
