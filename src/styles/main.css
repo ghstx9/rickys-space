@@ -131,6 +131,9 @@ body {
   color: #ffffff;
 }
 
+.desktop-break {
+  display: inline;
+}
 
 /* Description */
 .description {
@@ -192,6 +195,10 @@ body {
 @media (max-width: 768px) {
   .container {
     padding: 0 16px;
+  }
+  
+  .desktop-break {
+    display: none;
   }
   
   .nav {
