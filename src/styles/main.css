@@ -49,19 +49,7 @@ body {
   color: #ffffff;
 }
 
-.theme-toggle {
-  background: none;
-  border: none;
-  color: #888888;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 6px;
-  transition: color 0.3s ease;
-}
 
-.theme-toggle:hover {
-  color: #ffffff;
-}
 
 /* Main Content */
 .main {
@@ -105,6 +93,7 @@ body {
   font-size: 18px;
   color: #cccccc;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .projects-grid {
@@ -142,15 +131,6 @@ body {
   color: #ffffff;
 }
 
-.project-icon.yellow {
-  background-color: #ffd700;
-  color: #000000;
-}
-
-.project-icon.purple {
-  background-color: #8b5cf6;
-  color: #ffffff;
-}
 
 /* Description */
 .description {
