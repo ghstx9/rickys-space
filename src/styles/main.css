@@ -88,20 +88,22 @@ body::before {
   background: var(--bg-primary);
   opacity: 0.8;
   z-index: -1;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-links {
   display: flex;
   gap: 32px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .nav-link {
   color: var(--text-muted);
   text-decoration: none;
   font-size: 15px;
   font-weight: 500;
   position: relative;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 8px 0;
 }
 
@@ -113,11 +115,13 @@ body::before {
   width: 0;
   height: 2px;
   background: var(--accent);
-  transition: width 0.3s ease;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.active {
   color: var(--text-primary);
+  text-shadow: 0 0 8px var(--glow);
 }
 
 .nav-link.active::after {
