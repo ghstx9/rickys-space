@@ -1,4 +1,29 @@
 /* public/styles/main.css */
+:root {
+  /* Dark theme (default) */
+  --bg-color: #0a0a0a;
+  --text-color: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #888888;
+  --border-color: #2a2a2a;
+  --card-bg: #1a1a1a;
+  --card-hover-bg: #2a2a2a;
+  --icon-bg: #333333;
+  --link-underline: #555555;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #0a0a0a;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+  --border-color: #e5e5e5;
+  --card-bg: #f5f5f5;
+  --card-hover-bg: #e5e5e5;
+  --icon-bg: #d5d5d5;
+  --link-underline: #aaaaaa;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,25 +32,34 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.dm-sans-notavers {
+.dm-sans-onloo {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 200;
+  font-weight: 300;
   font-style: normal;
 }
 
-.libre-franklin-yesavers {
+.libre-franklin-ormoo {
   font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.rubik-ormos {
+  font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
 
 .container {
   max-width: 1200px;
@@ -47,7 +81,7 @@ body {
 }
 
 .nav-link {
-  color: #888888;
+  color: var(--text-muted);
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
@@ -55,15 +89,61 @@ body {
 }
 
 .nav-link.active {
-  color: #ffffff;
+  color: var(--text-color);
   font-weight: 500;
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: var(--text-color);
 }
 
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
 
+.theme-toggle:hover {
+  color: var(--text-color);
+  background-color: var(--card-bg);
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+}
+
+/* Show sun icon in dark mode */
+[data-theme="dark"] .theme-toggle .sun-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+/* Show moon icon in light mode */
+[data-theme="light"] .theme-toggle .sun-icon {
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
+[data-theme="light"] .theme-toggle .moon-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
 
 /* Main Content */
 .main {
@@ -83,7 +163,7 @@ body {
 }
 
 .hero-subtitle {
-  color: #888888;
+  color: var(--text-muted);
   font-weight: 300;
 }
 
@@ -94,7 +174,7 @@ body {
 
 .intro p {
   font-size: 18px;
-  color: #cccccc;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -105,7 +185,7 @@ body {
 
 .projects-intro {
   font-size: 18px;
-  color: #cccccc;
+  color: var(--text-secondary);
   margin-bottom: 30px;
   font-weight: 600;
 }
@@ -122,17 +202,17 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: #1a1a1a;
+  background-color: var(--card-bg);
   padding: 12px 20px;
   border-radius: 50px;
   font-size: 16px;
-  color: #ffffff;
+  color: var(--text-color);
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .project-item:hover {
-  background-color: #2a2a2a;
+  background-color: var(--card-hover-bg);
 }
 
 .project-icon {
@@ -142,8 +222,8 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #333333;
-  color: #ffffff;
+  background-color: var(--icon-bg);
+  color: var(--text-color);
 }
 
 .desktop-break {
@@ -158,7 +238,7 @@ body {
 
 .description p {
   font-size: 18px;
-  color: #cccccc;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
@@ -169,27 +249,27 @@ body {
 
 .cta p {
   font-size: 18px;
-  color: #cccccc;
+  color: var(--text-secondary);
   font-family: "DM Sans", sans-serif;
 }
 
 /* Links */
 .link {
-  color: #ffffff;
+  color: var(--text-color);
   text-decoration: underline;
-  text-decoration-color: #555555;
+  text-decoration-color: var(--link-underline);
   text-underline-offset: 4px;
   transition: text-decoration-color 0.3s ease;
 }
 
 .link:hover {
-  text-decoration-color: #ffffff;
+  text-decoration-color: var(--text-color);
 }
 
 /* Footer */
 .footer {
   padding: 40px 0;
-  border-top: 1px solid #2a2a2a;
+  border-top: 1px solid var(--border-color);
 }
 
 .social-links {
@@ -198,14 +278,14 @@ body {
 }
 
 .social-link {
-  color: #888888;
+  color: var(--text-muted);
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
 .social-link:hover {
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 /* Responsive Design */
@@ -222,6 +302,13 @@ body {
     flex-direction: column;
     gap: 20px;
     padding: 20px 0;
+    position: relative;
+  }
+  
+  .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 0;
   }
   
   .nav-links {
