@@ -183,8 +183,9 @@ body::before {
 }
 
 .theme-toggle svg {
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 [data-theme="dark"] .sun-icon {
   opacity: 1;
