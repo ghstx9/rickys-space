@@ -168,6 +168,20 @@ body::before {
   z-index: -1;
 }
 
+.theme-toggle.transitioning::before {
+  width: 100px;
+  height: 100px;
+  opacity: 0.1;
+}
+
+.theme-toggle:hover {
+  background: var(--card-hover);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+}
+
 .theme-toggle svg {
   transition: all 0.3s ease;
 }
