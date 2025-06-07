@@ -336,8 +336,25 @@ body::before {
 }
 
 .tech-icon img {
-  filter: brightness(0.9);
   transition: filter 0.3s ease;
+}
+
+[data-theme="dark"] .astro-light-icon {
+  display: none;
+}
+
+[data-theme="dark"] .astro-dark-icon {
+  display: block;
+  filter: brightness(0.9);
+}
+
+[data-theme="light"] .astro-dark-icon {
+  display: none;
+}
+
+[data-theme="light"] .astro-light-icon {
+  display: block;
+  filter: brightness(1);
 }
 
 .tech-item:hover .tech-icon img {
