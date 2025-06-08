@@ -1,6 +1,5 @@
 /* src/styles/main.css */
 :root {
-  /* Dark theme (default) */
   --bg-primary: #0a0a0a;
   --bg-secondary: #111111;
   --bg-tertiary: #1a1a1a;
@@ -45,25 +44,11 @@ body {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Background gradient overlay */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 50% 20%, var(--glow) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: -1;
-}
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 24px;
 }
-
 
 .nav {
   display: flex;
@@ -361,7 +346,6 @@ body::before {
   filter: brightness(1.1);
 }
 
-/* Description */
 .description {
   margin-bottom: 100px;
   animation: fadeInUp 0.8s ease-out 0.4s both;
@@ -376,7 +360,6 @@ body::before {
   margin: 0 auto;
 }
 
-/* CTA Section */
 .cta {
   text-align: center;
   margin-bottom: 100px;
@@ -409,7 +392,6 @@ body::before {
   box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
-/* Links */
 .link {
   color: var(--accent);
   text-decoration: none;
@@ -422,7 +404,6 @@ body::before {
   border-bottom-color: var(--accent);
 }
 
-/* Footer */
 .footer {
   padding: 60px 0;
   border-top: 1px solid var(--border);
@@ -460,7 +441,6 @@ body::before {
   font-size: 14px;
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -481,7 +461,6 @@ body::before {
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
