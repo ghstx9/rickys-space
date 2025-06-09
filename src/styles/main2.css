@@ -268,16 +268,6 @@ body {
   overflow: hidden;
 }
 
-.project-placeholder {
-  color: var(--text-muted);
-  transition: all 0.3s ease;
-}
-
-.project-card:hover .project-placeholder {
-  color: var(--accent);
-  transform: scale(1.1);
-}
-
 .project-content {
   padding: 24px;
 }
@@ -363,6 +353,17 @@ body {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
 }
 
 /* Responsive adjustments */
