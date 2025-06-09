@@ -189,11 +189,15 @@ import '../styles/main.css';
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (this: HTMLAnchorElement, e: MouseEvent) {
           e.preventDefault();
-          const href = this.getAttribute('href');
+
+
+          const anchorElement = e.currentTarget as HTMLAnchorElement;
+          const href = anchorElement.getAttribute('href');
+
           if (href) {
-            const target = document.querySelector(href);
-            if (target) {
-              target.scrollIntoView({
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+              targetElement.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
               });
