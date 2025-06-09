@@ -1,0 +1,17 @@
+---
+// src/components/techitem.astro
+export interface Props {
+  href: string;
+  name: string;
+  icon: string;
+}
+
+const { href, name, icon } = Astro.props;
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer" class="tech-item">
+  <div class="tech-icon">
+    <Fragment set:html={icon} />
+  </div>
+  <span>{name}</span>
+</a>
