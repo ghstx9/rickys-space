@@ -1,0 +1,173 @@
+---
+// src/pages/index2.astro
+import '../styles/main.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Projects - Ricky's Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-links">
+          <a href="/" class="nav-link">home</a>
+          <a href="/projects" class="nav-link active">projects</a>
+          <a href="#" class="nav-link">experience</a>
+        </div>
+        
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </nav>
+
+      <main class="main">
+        <section class="page-header">
+          <h1 class="page-title">my projects</h1>
+          <p class="page-description">
+            a collection of things i've built while learning and experimenting with different technologies
+          </p>
+        </section>
+
+        <section class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="18" x="3" y="3" rx="2"/>
+                  <path d="M9 9h6v6H9z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">portfolio website</h3>
+              <p class="project-description">
+                this very website you're looking at! built with astro, featuring dark/light themes and responsive design.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">astro</span>
+                <span class="tech-tag">css</span>
+                <span class="tech-tag">typescript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ghstx9" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                  code
+                </a>
+                <a href="#" class="project-link primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15,3 21,3 21,9"/>
+                    <line x1="10" x2="21" y1="14" y2="3"/>
+                  </svg>
+                  live demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                  <path d="M2 17l10 5 10-5"/>
+                  <path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">coming soon</h3>
+              <p class="project-description">
+                currently working on some exciting projects. check back soon to see what i'm building!
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">react</span>
+                <span class="tech-tag">next.js</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link disabled">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                  in progress
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="social-links">
+            <a href="https://x.com/dfxyeet" target="_blank" rel="noopener noreferrer" class="social-link">twitter</a>
+            <a href="mailto:rickyaldiansyah92@gmail.com" class="social-link">email</a>
+            <a href="https://github.com/ghstx9" target="_blank" rel="noopener noreferrer" class="social-link">github</a>
+            <a href="https://discord.com/invite/2KXSDTp8wA" target="_blank" rel="noopener noreferrer" class="social-link">discord</a>
+          </div>
+          <p class="footer-text">
+            © 2025 ricky aldiansyah. crafted with 
+            <a href="https://astro.build/" target="_blank" rel="noopener noreferrer" class="astro-gradient-link">astro.</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const html = document.documentElement;
+  
+      const currentTheme = localStorage.getItem('theme') || 'dark';
+      html.setAttribute('data-theme', currentTheme);
+  
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const currentTheme = html.getAttribute('data-theme');
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+          html.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            target.style.opacity = '1';
+            target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.project-card').forEach(el => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
