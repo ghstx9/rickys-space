@@ -48,9 +48,10 @@ import '../styles/main2.css';
         </section>
 
         <section class="projects-grid">
+          <!-- Row 1 - Completed Projects -->
           <div class="project-card">
             <div class="project-image">
-              <img src="/images/ashariqa.jpg" alt="AshariQA" />
+              <img id="ashariqa-image" src="/images/ashariqa.jpg" alt="AshariQA" />
             </div>
             <div class="project-content">
               <h3 class="project-title">AshariQA</h3>
@@ -83,6 +84,40 @@ import '../styles/main2.css';
 
           <div class="project-card">
             <div class="project-image">
+              <img id="rickyastro-image" src="/images/rickyastro.png" alt="Ricky's Portfolio" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Ricky's Portfolio</h3>
+              <p class="project-description">
+                my previous portfolio website, built with astro and typescript.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">astro</span>
+                <span class="tech-tag">typescript</span>
+                <span class="tech-tag">css</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ghstx9/Portfolio1" target="_blank" rel="noopener noreferrer" class="project-link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                  </svg>
+                  code
+                </a>
+                <a href="https://rickyastro.pages.dev/" target="_blank" rel="noopener noreferrer" class="project-link primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                    <polyline points="15,3 21,3 21,9"/>
+                    <line x1="10" x2="21" y1="14" y2="3"/>
+                  </svg>
+                  live demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 - Projects in Progress -->
+          <div class="project-card">
+            <div class="project-image">
               <div class="project-placeholder">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -92,13 +127,14 @@ import '../styles/main2.css';
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">coming soon</h3>
+              <h3 class="project-title">Tasbih Online</h3>
               <p class="project-description">
-                currently working on some exciting projects. check back soon to see what i'm building!
+                a simple and elegant online tasbih counter for daily islamic prayer.
               </p>
               <div class="project-tech">
                 <span class="tech-tag">react</span>
-                <span class="tech-tag">next.js</span>
+                <span class="tech-tag">javascript</span>
+                <span class="tech-tag">css</span>
               </div>
               <div class="project-links">
                 <a href="#" class="project-link disabled">
@@ -106,7 +142,39 @@ import '../styles/main2.css';
                     <circle cx="12" cy="12" r="10"/>
                     <path d="M12 6v6l4 2"/>
                   </svg>
-                  in progress
+                  coming soon
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                  <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                  <line x1="12" y1="22.08" x2="12" y2="12"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">idk</h3>
+              <p class="project-description">
+                got no project idea, so i just put this here as a placeholder for the sake of 2x2 grid layout.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">nothing</span>
+                <span class="tech-tag">nothing</span>
+                <span class="tech-tag">nothing</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link disabled">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                  </svg>
+                  coming soon
                 </a>
               </div>
             </div>
@@ -131,9 +199,34 @@ import '../styles/main2.css';
     <script>
       const themeToggle = document.getElementById('theme-toggle');
       const html = document.documentElement;
+      const ashariqaImage = document.getElementById('ashariqa-image');
+      const rickyastroImage = document.getElementById('rickyastro-image');
   
       const currentTheme = localStorage.getItem('theme') || 'dark';
       html.setAttribute('data-theme', currentTheme);
+      
+      function updateAshariqaImage(theme) {
+        if (ashariqaImage) {
+          if (theme === 'light') {
+            ashariqaImage.src = '/images/ashariqawhite.jpg';
+          } else {
+            ashariqaImage.src = '/images/ashariqa.jpg';
+          }
+        }
+      }
+
+      function updateRickyastroImage(theme) {
+        if (rickyastroImage) {
+          if (theme === 'light') {
+            rickyastroImage.src = '/images/rickyastrowhite.png';
+          } else {
+            rickyastroImage.src = '/images/rickyastro.png';
+          }
+        }
+      }
+      
+      updateAshariqaImage(currentTheme);
+      updateRickyastroImage(currentTheme);
   
       if (themeToggle) {
         themeToggle.addEventListener('click', () => {
@@ -142,6 +235,9 @@ import '../styles/main2.css';
         
           html.setAttribute('data-theme', newTheme);
           localStorage.setItem('theme', newTheme);
+          
+          updateAshariqaImage(newTheme);
+          updateRickyastroImage(newTheme);
         });
       }
 
