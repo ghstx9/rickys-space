@@ -220,10 +220,11 @@ import '../styles/main2.css';
 
       function updateRickyastroImage(theme: string) {
         if (rickyastroImage) {
+          const imgElement = rickyastroImage as HTMLImageElement;
           if (theme === 'light') {
-            rickyastroImage.src = '/images/rickyastrowhite.png';
+            imgElement.src = '/images/rickyastrowhite.png';
           } else {
-            rickyastroImage.src = '/images/rickyastro.png';
+            imgElement.src = '/images/rickyastro.png';
           }
         }
       }
