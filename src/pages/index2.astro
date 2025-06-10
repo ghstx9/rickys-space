@@ -231,10 +231,11 @@ import '../styles/main2.css';
 
       function updateSpotifyCloneImage(theme: string) {
         if (spotifyCloneImage) {
+          const imgElement = spotifyCloneImage as HTMLImageElement;
           if (theme === 'light') {
-            spotifyCloneImage.src = '/images/spotify-clone-white.png';
+            imgElement.src = '/images/spotify-clone-white.png';
           } else {
-            spotifyCloneImage.src = '/images/spotify-clone.png';
+            imgElement.src = '/images/spotify-clone.png';
           }
         }
       }
