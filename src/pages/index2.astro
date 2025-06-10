@@ -209,15 +209,16 @@ import '../styles/main2.css';
       
       function updateAshariqaImage(theme: string) {
         if (ashariqaImage) {
+          const imgElement = ashariqaImage as HTMLImageElement;
           if (theme === 'light') {
-            ashariqaImage.src = '/images/ashariqawhite.jpg';
+            imgElement.src = '/images/ashariqawhite.jpg';
           } else {
-            ashariqaImage.src = '/images/ashariqa.jpg';
+            imgElement.src = '/images/ashariqa.jpg';
           }
         }
       }
 
-      function updateRickyastroImage(theme) {
+      function updateRickyastroImage(theme: string) {
         if (rickyastroImage) {
           if (theme === 'light') {
             rickyastroImage.src = '/images/rickyastrowhite.png';
