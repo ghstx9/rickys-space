@@ -118,7 +118,7 @@ import '../styles/main2.css';
           <!-- Row 2 -->
           <div class="project-card">
             <div class="project-image">
-              <img id="rickyastro-image" src="/images/spotify-clone.png" alt="Spotify Clone" />
+              <img id="spotify-clone-image" src="/images/spotify-clone.png" alt="Spotify Clone" />
             </div>
             <div class="project-content">
               <h3 class="project-title">Spotify Clone</h3>
@@ -160,14 +160,14 @@ import '../styles/main2.css';
               </div>
             </div>
             <div class="project-content">
-              <h3 class="project-title">idk</h3>
+              <h3 class="project-title">Weather Dashboard</h3>
               <p class="project-description">
-                got no project idea, so i just put this here as a placeholder for the sake of 2x2 grid layout.
+                a planned beautiful weather app with real-time data fetching and display.
               </p>
               <div class="project-tech">
-                <span class="tech-tag">nothing</span>
-                <span class="tech-tag">nothing</span>
-                <span class="tech-tag">nothing</span>
+                <span class="tech-tag">react</span>
+                <span class="tech-tag">api</span>
+                <span class="tech-tag">css</span>
               </div>
               <div class="project-links">
                 <a href="#" class="project-link disabled">
@@ -202,11 +202,12 @@ import '../styles/main2.css';
       const html = document.documentElement;
       const ashariqaImage = document.getElementById('ashariqa-image');
       const rickyastroImage = document.getElementById('rickyastro-image');
+      const spotifyCloneImage = document.getElementById('spotify-clone-image');
   
       const currentTheme = localStorage.getItem('theme') || 'dark';
       html.setAttribute('data-theme', currentTheme);
       
-      function updateAshariqaImage(theme) {
+      function updateAshariqaImage(theme: string) {
         if (ashariqaImage) {
           if (theme === 'light') {
             ashariqaImage.src = '/images/ashariqawhite.jpg';
@@ -225,9 +226,20 @@ import '../styles/main2.css';
           }
         }
       }
+
+      function updateSpotifyCloneImage(theme) {
+        if (spotifyCloneImage) {
+          if (theme === 'light') {
+            spotifyCloneImage.src = '/images/spotify-clone-white.png';
+          } else {
+            spotifyCloneImage.src = '/images/spotify-clone.png';
+          }
+        }
+      }
       
       updateAshariqaImage(currentTheme);
       updateRickyastroImage(currentTheme);
+      updateSpotifyCloneImage(currentTheme);
   
       if (themeToggle) {
         themeToggle.addEventListener('click', () => {
@@ -239,6 +251,7 @@ import '../styles/main2.css';
           
           updateAshariqaImage(newTheme);
           updateRickyastroImage(newTheme);
+          updateSpotifyCloneImage(newTheme);
         });
       }
 
@@ -250,7 +263,7 @@ import '../styles/main2.css';
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
+            const target = entry.target;
             target.style.opacity = '1';
             target.style.transform = 'translateY(0)';
           }
