@@ -229,21 +229,9 @@ import '../styles/main2.css';
         }
       }
 
-      function updateSpotifyCloneImage(theme: string) {
-        if (spotifyCloneImage) {
-          const imgElement = spotifyCloneImage as HTMLImageElement;
-          if (theme === 'light') {
-            imgElement.src = '/images/spotify-clone-white.png';
-          } else {
-            imgElement.src = '/images/spotify-clone.png';
-          }
-        }
-      }
-      
       updateAshariqaImage(currentTheme);
       updateRickyastroImage(currentTheme);
-      updateSpotifyCloneImage(currentTheme);
-  
+
       if (themeToggle) {
         themeToggle.addEventListener('click', () => {
           const currentTheme = html.getAttribute('data-theme');
