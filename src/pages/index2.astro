@@ -266,7 +266,7 @@ import '../styles/main2.css';
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const target = entry.target;
+            const target = entry.target as HTMLElement;
             target.style.opacity = '1';
             target.style.transform = 'translateY(0)';
           }
