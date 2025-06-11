@@ -1,0 +1,24 @@
+---
+import SkillItem from './skillitem.astro';
+
+export interface Skill {
+  name: string;
+  progress: number;
+}
+
+export interface Props {
+  title: string;
+  skills: Skill[];
+}
+
+const { title, skills } = Astro.props;
+---
+
+<div class="skill-category">
+  <h3 class="skill-category-title">{title}</h3>
+  <div class="skill-items">
+    {skills.map(skill => (
+      <SkillItem name={skill.name} progress={skill.progress} />
+    ))}
+  </div>
+</div>

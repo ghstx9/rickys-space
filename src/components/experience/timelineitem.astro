@@ -1,0 +1,33 @@
+---
+export interface Props {
+  title: string;
+  institution: string;
+  institutionUrl: string;
+  dateRange: string;
+  description: string;
+  skills: string[];
+}
+
+const { title, institution, institutionUrl, dateRange, description, skills } = Astro.props;
+---
+
+<div class="timeline-item">
+  <div class="timeline-marker"></div>
+  <div class="timeline-content">
+    <div class="timeline-header">
+      <h3 class="timeline-title">{title}</h3>
+      <span class="timeline-meta">
+        <a href={institutionUrl} target="_blank" rel="noopener noreferrer" class="institution-link">
+          {institution}
+        </a>
+        <span class="timeline-date">{dateRange}</span>
+      </span>
+    </div>
+    <p class="timeline-description">{description}</p>
+    <div class="timeline-skills">
+      {skills.map(skill => (
+        <span class="skill-tag">{skill}</span>
+      ))}
+    </div>
+  </div>
+</div>

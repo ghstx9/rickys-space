@@ -1,0 +1,40 @@
+---
+import SkillCategory from './skillcategory.astro';
+
+const frontEndSkills = [
+  { name: 'HTML5', progress: 95 },
+  { name: 'CSS', progress: 75 },
+  { name: 'Astro', progress: 80 },
+  { name: 'React', progress: 20 }
+];
+
+const toolsSkills = [
+  { name: 'Git & GitHub', progress: 80 },
+  { name: 'Vite', progress: 75 },
+  { name: 'NPM/Package Management', progress: 65 },
+  { name: 'VS Code', progress: 90 }
+];
+
+const uiUxSkills = [
+  { name: 'Responsive Design', progress: 85 },
+  { name: 'CSS Animations', progress: 80 },
+  { name: 'UI Design', progress: 85 },
+  { name: 'Color Theory', progress: 45 }
+];
+
+const designSkills = [
+  { name: 'Canva', progress: 95 },
+  { name: 'Adobe Photoshop', progress: 60 },
+  { name: 'Figma', progress: 85 }
+];
+---
+
+<section class="experience-section">
+  <h2 class="section-heading">Technical Skills</h2>
+  <div class="skills-grid">
+    <SkillCategory title="Front-End Development" skills={frontEndSkills} />
+    <SkillCategory title="Tools & Workflow" skills={toolsSkills} />
+    <SkillCategory title="UI/UX" skills={uiUxSkills} />
+    <SkillCategory title="Design" skills={designSkills} />
+  </div>
+</section>
