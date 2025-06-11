@@ -1,0 +1,58 @@
+---
+// src/components/ThemeScript.astro
+---
+
+<script>
+  const themeToggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  html.setAttribute('data-theme', currentTheme);
+  
+  function updateThemeImages(theme: string) {
+    document.querySelectorAll('img[data-light-src]').forEach(img => {
+      const imgElement = img as HTMLImageElement;
+      const lightSrc = imgElement.getAttribute('data-light-src');
+      const originalSrc = imgElement.src.includes('white') ? 
+        imgElement.src.replace('white', '').replace('.png', '.png') : 
+        imgElement.src;
+      
+      if (lightSrc) {
+        imgElement.src = theme === 'light' ? lightSrc : originalSrc;
+      }
+    });
+  }
+
+  updateThemeImages(currentTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      updateThemeImages(newTheme);
+    });
+  }
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target as HTMLElement;
+        target.style.opacity = '1';
+        target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.project-card').forEach(el => {
+    observer.observe(el);
+  });
+</script>

@@ -1,14 +1,23 @@
----
-// src/pages/index2.astro
-import Layout from '../layouts/layout2.astro';
-import Navigation from '../components/projects/navi.astro';
-import PageHeader from '../components/projects/pageheader.astro';
-import ProjectCard from '../components/projects/projectscard.astro';
-import Footer from '../components/projects/footer.astro';
-import ThemeScript from '../components/projects/themescript.astro';
-import '../styles/main2.css';
+// src/data/projectdata.ts
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: {
+    src: string;
+    alt: string;
+    lightSrc?: string;
+  };
+  technologies: string[];
+  links: {
+    github?: string;
+    demo?: string;
+  };
+  featured?: boolean;
+  status?: 'completed' | 'in-progress' | 'archived';
+}
 
-const projects = [
+export const projects: Project[] = [
   {
     id: 'ashariqa',
     title: 'AshariQA',
@@ -22,7 +31,9 @@ const projects = [
     links: {
       github: 'https://github.com/ghstx9/AshariQA',
       demo: 'https://ashariqa.pages.dev/'
-    }
+    },
+    featured: true,
+    status: 'completed'
   },
   {
     id: 'rickyastro',
@@ -37,7 +48,9 @@ const projects = [
     links: {
       github: 'https://github.com/ghstx9/Portfolio1',
       demo: 'https://rickyastro.pages.dev/'
-    }
+    },
+    featured: true,
+    status: 'completed'
   },
   {
     id: 'spotify-clone',
@@ -51,7 +64,8 @@ const projects = [
     links: {
       github: 'https://github.com/ghstx9/spotify-clone',
       demo: 'https://rckyspotify.pages.dev/'
-    }
+    },
+    status: 'completed'
   },
   {
     id: 'panopticon',
@@ -65,37 +79,12 @@ const projects = [
     links: {
       github: 'https://github.com/ghstx9/Panopticon',
       demo: 'https://panopticon.pages.dev/'
-    }
+    },
+    status: 'completed'
   }
 ];
----
 
-<Layout title="Ricky's Space" description="A collection of things I've built while learning and experimenting with different technologies">
-  <div class="container">
-    <Navigation currentPage="projects" />
-
-    <main class="main">
-      <PageHeader 
-        title="my projects" 
-        description="a collection of things i've built while learning and experimenting with different technologies"
-      />
-
-      <section class="projects-grid">
-        {projects.map(project => (
-          <ProjectCard
-            id={project.id}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            technologies={project.technologies}
-            links={project.links}
-          />
-        ))}
-      </section>
-
-      <Footer />
-    </main>
-  </div>
-
-  <ThemeScript />
-</Layout>
+// Helper functions
+export const getFeaturedProjects = () => projects.filter(p => p.featured);
+export const getProjectsByStatus = (status: Project['status']) => projects.filter(p => p.status === status);
+export const getProjectById = (id: string) => projects.find(p => p.id === id);
