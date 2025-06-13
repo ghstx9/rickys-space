@@ -68,17 +68,17 @@ export const projects: Project[] = [
     status: 'completed'
   },
   {
-    id: 'panopticon',
-    title: 'Panopticon Catcher',
-    description: 'not actually a serious project, just for fun to troll the teachers of my school.',
+    id: 'tally',
+    title: 'Tally Counter',
+    description: 'A simple tally counter web in Astro & TypeScript.',
     image: {
-      src: '/images/panopticon.png',
+      src: '/images/tallycounter.png',
       alt: 'panopticon'
     },
-    technologies: ['html', 'css'],
+    technologies: ['Astro', 'TailwindCSS', 'TypeScript'],
     links: {
-      github: 'https://github.com/ghstx9/Panopticon',
-      demo: 'https://panopticon.pages.dev/'
+      github: 'https://github.com/ghstx9/tallycounter',
+      demo: 'https://tallytest1.pages.dev/'
     },
     status: 'completed'
   }
