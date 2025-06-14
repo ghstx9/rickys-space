@@ -23,11 +23,11 @@ export const projects: Project[] = [
     title: 'AshariQA',
     description: 'my attempt at making a clone of IslamQA, built in html/css with vanilla javascript.',
     image: {
-      src: '/images/ashariqa.png',
+      src: '/images/ashariqa.jpg',
       alt: 'AshariQA',
-      lightSrc: '/images/ashariqawhite.png'
+      lightSrc: '/images/ashariqawhite.jpg'
     },
-    technologies: ['html', 'css', 'javascript'],
+    technologies: ['HTML', 'CSS', 'JavaScript'],
     links: {
       github: 'https://github.com/ghstx9/AshariQA',
       demo: 'https://ashariqa.pages.dev/'
@@ -38,13 +38,13 @@ export const projects: Project[] = [
   {
     id: 'rickyastro',
     title: "Ricky's Portfolio",
-    description: 'my previous portfolio website, built with astro and typescript.',
+    description: 'My previous portfolio website, built with Astro and TypeScript.',
     image: {
-      src: '/images/rickyastro.png',
+      src: '/images/rickyastro.jpg',
       alt: "Ricky's Portfolio",
-      lightSrc: '/images/rickyastrowhite.png'
+      lightSrc: '/images/rickyastrowhite.jpg'
     },
-    technologies: ['astro', 'typescript', 'css'],
+    technologies: ['Astro', 'TypeScript', 'CSS'],
     links: {
       github: 'https://github.com/ghstx9/Portfolio1',
       demo: 'https://rickyastro.pages.dev/'
@@ -53,17 +53,18 @@ export const projects: Project[] = [
     status: 'completed'
   },
   {
-    id: 'spotify-clone',
-    title: 'Spotify Clone',
-    description: 'my very own version of a spotify clone.',
+    id: 'weatherapp',
+    title: 'React Weather App',
+    description: 'A weather app built with React and JavaScript.',
     image: {
-      src: '/images/spotify-clone.png',
-      alt: 'Spotify Clone'
+      src: '/images/weather.jpg',
+      alt: 'Weather App',
+      lightSrc: '/images/weatherwhite.jpg'
     },
-    technologies: ['astro', 'css', 'javascript'],
+    technologies: ['React', 'TailwindCSS', 'JavaScript'],
     links: {
-      github: 'https://github.com/ghstx9/spotify-clone',
-      demo: 'https://rckyspotify.pages.dev/'
+      github: 'https://github.com/ghstx9/weather-app',
+      demo: 'https://rickysweatherapp.pages.dev/'
     },
     status: 'completed'
   },
@@ -72,8 +73,9 @@ export const projects: Project[] = [
     title: 'Tally Counter',
     description: 'A simple tally counter web in Astro & TypeScript.',
     image: {
-      src: '/images/tallycounter.png',
-      alt: 'panopticon'
+      src: '/images/tallycounter.jpg',
+      alt: 'panopticon',
+      lightSrc: '/images/tallycounterwhite.jpg'
     },
     technologies: ['Astro', 'TailwindCSS', 'TypeScript'],
     links: {
